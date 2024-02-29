@@ -500,9 +500,18 @@
 
 
 
-  <!-- <script>
+  <script>
+
+    const navbarToggler = document.querySelector('.navbar-toggler');
     const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
+
+
+    navbarToggler.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        offcanvas.classList.toggle('show');
+      }
+    });
 
     offcanvas.addEventListener('show.bs.offcanvas', function () {
       stickyTop.style.overflow = 'visible';
@@ -512,16 +521,8 @@
       stickyTop.style.overflow = 'hidden';
     });
 
-  </script> -->
-  <script>
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const offcanvas = document.querySelector('.offcanvas');
 
-    navbarToggler.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
-        offcanvas.classList.toggle('show');
-      }
-    });
+
   </script>
   <!-- <script>
     const rootElement = document.querySelector(":root");
