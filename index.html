@@ -500,7 +500,7 @@
 
 
 
-  <script>
+  <!-- <script>
     const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
@@ -512,8 +512,17 @@
       stickyTop.style.overflow = 'hidden';
     });
 
-  </script>
+  </script> -->
+  <script>
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const offcanvas = document.querySelector('.offcanvas');
 
+    navbarToggler.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        offcanvas.classList.toggle('show');
+      }
+    });
+  </script>
   <!-- <script>
     const rootElement = document.querySelector(":root");
     const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
@@ -674,7 +683,7 @@
       hideDetailBtn2.style.display = "none";
     });
   </script>
-<!-- git remote add origin https://github.com/Dandiyusbial/mega.git -->
+  <!-- git remote add origin https://github.com/Dandiyusbial/mega.git -->
 
 </body>
 
