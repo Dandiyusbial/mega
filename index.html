@@ -497,33 +497,24 @@
       },
     });
   </script> -->
-
-
-
-  <script>
-
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const stickyTop = document.querySelector('.sticky-top');
-    const offcanvas = document.querySelector('.offcanvas');
-
-
-    navbarToggler.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
-        offcanvas.classList.toggle('show');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', function () {
+    const offcanvasList = [].slice.call(document.querySelectorAll('.offcanvas'));
+    offcanvasList.forEach(function (offcanvasEl) {
+      const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      if (offcanvas) {
+        offcanvas.toggle();
+      } else {
+        new bootstrap.Offcanvas(offcanvasEl);
       }
     });
-
-    offcanvas.addEventListener('show.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'visible';
-    });
-
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-      stickyTop.style.overflow = 'hidden';
-    });
-
-
-
+  });
+});
   </script>
+
+  
   <!-- <script>
     const rootElement = document.querySelector(":root");
     const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
