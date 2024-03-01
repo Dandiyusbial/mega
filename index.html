@@ -509,21 +509,29 @@
 
 
   <script>
-    const hamburger = document.querySelector('.navbar-toggler');
+
+    const navbarToggler = document.querySelector('.navbar-toggler');
     const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
-    hamburger.addEventListener('click',function () {
+
+    navbarToggler.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        offcanvas.classList.toggle('show');
+      }
+    });
+
+    offcanvas.addEventListener('show.bs.offcanvas', function () {
       stickyTop.style.overflow = 'visible';
     });
 
-    offcanvas.addEventListener('hidden.bs.offcanvas',function (){
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
       stickyTop.style.overflow = 'hidden';
     });
 
+
+
   </script>
-  
-  
   <!-- <script>
     const rootElement = document.querySelector(":root");
     const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
