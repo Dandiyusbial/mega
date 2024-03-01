@@ -13,9 +13,9 @@ body {
   min-height: 4000px;
 
 
-    font-family: "Acme", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    /* font-family: "Acme", sans-serif;
+    font-weight: 400px;
+    font-style: normal; */
 
 }
 
@@ -67,6 +67,8 @@ body {
   background-color: #547be6;
   color: white;
 }
+
+
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
@@ -177,7 +179,7 @@ body {
   background-color: var(--bg);
   color: white;
   padding-top: 10rem;
-  padding-bottom: 8rem;
+  /* padding-bottom: 8rem; */
 }
 
 .info .alamat {
@@ -509,10 +511,10 @@ footer li {
     font-size: 65%;
   }
 
-  .simply-countdown > .simply-section {
+  /* .simply-countdown > .simply-section {
     padding: 60px;
     margin: 5px;
-  }
+  } */
 
   .mynavbar .nav-link {
     font-size: 2rem;
@@ -527,6 +529,17 @@ footer li {
     width: 140px;
     height: 140px;
   }
+
+.home h2,
+.info h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+ padding-top: 2rem;
+}
+
+
 }
 
 /* mobile phone */
@@ -535,10 +548,16 @@ footer li {
     font-size: 60%;
   }
 
+
+
   .simply-countdown > .simply-section {
     padding: 45px;
     margin: 3px;
   }
+
+
+
+
 
   .timeline li .timeline-image {
     width: 80px;

@@ -55,6 +55,9 @@
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- letak off canvas -->
+
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Megatama</h5> -->
@@ -72,8 +75,13 @@
           </div>
         </div>
       </div>
+
+      <!-- letakoffcanvas -->
     </div>
   </nav>
+
+
+
 
   <section id="home" class="home">
     <div class="container">
@@ -501,29 +509,21 @@
 
 
   <script>
-
-    const navbarToggler = document.querySelector('.navbar-toggler');
+    const hamburger = document.querySelector('.navbar-toggler');
     const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
-
-    navbarToggler.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
-        offcanvas.classList.toggle('show');
-      }
-    });
-
-    offcanvas.addEventListener('show.bs.offcanvas', function () {
+    hamburger.addEventListener('click',function () {
       stickyTop.style.overflow = 'visible';
     });
 
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    offcanvas.addEventListener('hidden.bs.offcanvas',function (){
       stickyTop.style.overflow = 'hidden';
     });
 
-
-
   </script>
+  
+  
   <!-- <script>
     const rootElement = document.querySelector(":root");
     const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
