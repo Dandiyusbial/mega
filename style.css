@@ -539,6 +539,11 @@ footer li {
  padding-top: 2rem;
 }
 
+.offcanvas {
+  max-width: 60%; /* Mengatur lebar maksimum offcanvas */
+  /* max-height: 80vh; Mengatur tinggi maksimum offcanvas */
+  overflow-y: auto; /* Menambahkan scroll jika konten melebihi tinggi maksimum */
+}
 
 }
 
