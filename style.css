@@ -541,9 +541,10 @@ footer li {
 
 .offcanvas {
   max-width: 60%; /* Mengatur lebar maksimum offcanvas */
-  /* max-height: 80vh; Mengatur tinggi maksimum offcanvas */
+  max-height: 100vh; 
   overflow-y: auto; /* Menambahkan scroll jika konten melebihi tinggi maksimum */
 }
+
 
 }
 
