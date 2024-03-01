@@ -1,6 +1,6 @@
 :root {
   --white: #f1f1f1;
-  --black:#3b3a3a;
+  --black: #3b3a3a;
   --blue: #547be6;
   --pink: #f14e95;
   --bg: #0a0a0a;
@@ -13,7 +13,7 @@ body {
   min-height: 4000px;
 
 
-    /* font-family: "Acme", sans-serif;
+  /* font-family: "Acme", sans-serif;
     font-weight: 400px;
     font-style: normal; */
 
@@ -57,7 +57,7 @@ body {
   font-size: 1.4rem;
 }
 
-.hero a{
+.hero a {
   color: var(--bg);
   background-color: rgb(193, 207, 216);
   box-shadow: var(--shadow);
@@ -99,7 +99,7 @@ body {
   margin-top: -6rem;
   padding-top: 8rem;
   padding-bottom: 10rem;
-  
+
 }
 
 .home h2,
@@ -123,7 +123,7 @@ body {
 
 
 
-.rsvp h2{
+.rsvp h2 {
   color: var(--white);
   font-family: 'Work Sans';
   font-size: 4rem;
@@ -144,6 +144,10 @@ body {
 
 .home .couple {
   margin-top: 20px;
+
+}
+.home .couple .row {
+  margin-bottom: 0.5rem;
 
 }
 
@@ -171,7 +175,7 @@ body {
 .home .couple img {
   width: 100%;
   box-shadow: var(--shadow);
-  
+
 }
 
 
@@ -202,51 +206,57 @@ body {
 .info .card-body,
 .info .card-footer {
   display: flex;
-  border-bottom: 1px  #999;
+  border-bottom: 1px #999;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding-bottom: 1rem;
   padding-right: 2rem;
-  
+
 }
 
 .card-header .bi,
 .card-body .bi,
 .card-footer .bi,
 .card .icon {
-  margin-right: 2rem; /* Jarak sebelah kanan ikon dengan teks */
-  vertical-align: middle; /* Agar ikon dan teks berada pada baseline yang sama */
+  margin-right: 2rem;
+  /* Jarak sebelah kanan ikon dengan teks */
+  vertical-align: middle;
+  /* Agar ikon dan teks berada pada baseline yang sama */
 }
+
 .card-header span,
 .card-body span,
 .card-footer span {
-  vertical-align: middle; /* Agar ikon dan teks berada pada baseline yang sama */
+  vertical-align: middle;
+  /* Agar ikon dan teks berada pada baseline yang sama */
 }
 
 .info .card-footer {
-  border-top: 1px  #999; /*menghilangkan garis default*/
+  border-top: 1px #999;
+  /*menghilangkan garis default*/
   font-size: 1.1rem;
 
-} 
+}
 
 .info .card-footer a {
-color: #fff;
+  color: #fff;
 }
 
 
 .info .card .maps {
 
-  border-bottom: 1px  #999;
+  border-bottom: 1px #999;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding-bottom: 0.6rem;
   padding-right: 2rem;
   padding-top: 1rem;
-  
+
 }
 
 .maps2 {
-  padding: 0 0.5rem; /* Menambahkan padding kanan dan kiri sebesar 2 rem */
+  padding: 0 0.5rem;
+  /* Menambahkan padding kanan dan kiri sebesar 2 rem */
 }
 
 
@@ -309,7 +319,7 @@ color: #fff;
 }
 
 .timeline li .timeline-image {
-  width:20rem;
+  width: 20rem;
   height: 15rem;
   background-color: #ccc;
   position: absolute;
@@ -384,20 +394,22 @@ color: #fff;
   min-height: 100vh;
   margin-top: -6rem;
   padding-bottom: 5rem;
-  
-  
+
+
 }
 
-.rsvp .visimisi{
-padding-top: 8rem;
+.rsvp .visimisi {
+  padding-top: 8rem;
 }
 
 .rsvp h2 {
   font-size: 4.5rem;
 }
-.rsvp h3{
+
+.rsvp h3 {
   color: #fff;
 }
+
 .rsvp p {
   color: white;
   font-size: 1.2rem;
@@ -446,13 +458,15 @@ footer li {
 }
 
 .bi-whatsapp {
-  color: #888; /* Ganti warna ikon menjadi abu-abu */
+  color: #888;
+  /* Ganti warna ikon menjadi abu-abu */
 }
 
 @keyframes rotating {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -460,9 +474,7 @@ footer li {
 
 /* Media Query */
 /* Extra large */
-@media (max-width: 1200px) {
-
-}
+@media (max-width: 1200px) {}
 
 /* laptop */
 @media (max-width: 992px) {
@@ -470,9 +482,6 @@ footer li {
     font-size: 75%;
   }
 
-  .simply-countdown > .simply-section {
-    padding: 70px;
-  }
 
 
   .timeline::before {
@@ -511,11 +520,6 @@ footer li {
     font-size: 65%;
   }
 
-  /* .simply-countdown > .simply-section {
-    padding: 60px;
-    margin: 5px;
-  } */
-
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
@@ -530,22 +534,32 @@ footer li {
     height: 140px;
   }
 
-.home h2,
-.info h2,
-.story h2,
-.gallery h2,
-.rsvp h2,
-.gifts h2 {
- padding-top: 2rem;
-}
+  .home h2,
+  .info h2,
+  .story h2,
+  .gallery h2,
+  .rsvp h2,
+  .gifts h2 {
+    padding-top: 2rem;
+  }
 
-.offcanvas {
-  max-width: 60%; /* Mengatur lebar maksimum offcanvas */
-  max-height: 100vh; 
-  overflow-y: auto; /* Menambahkan scroll jika konten melebihi tinggi maksimum */
-}
+  .offcanvas {
+    max-width: 60%;
+    /* Mengatur lebar maksimum offcanvas */
+    max-height: 100vh;
+    overflow-y: auto;
+    /* Menambahkan scroll jika konten melebihi tinggi maksimum */
+  }
 
+  .home .couple h3{
+    margin-top: 2rem;
+  }
 
+  .home .couple .row {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+ 
 }
 
 /* mobile phone */
@@ -553,17 +567,6 @@ footer li {
   html {
     font-size: 60%;
   }
-
-
-
-  .simply-countdown > .simply-section {
-    padding: 45px;
-    margin: 3px;
-  }
-
-
-
-
 
   .timeline li .timeline-image {
     width: 80px;
