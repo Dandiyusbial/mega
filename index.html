@@ -510,18 +510,12 @@
 
   <script>
 
-    const navbarToggler = document.querySelector('.navbar-toggler');
+    const hamburger = document.querySelector('.navbar-toggler');
     const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
 
-    navbarToggler.addEventListener('click', () => {
-      if (window.innerWidth < 992) {
-        offcanvas.classList.toggle('show');
-      }
-    });
-
-    offcanvas.addEventListener('show.bs.offcanvas', function () {
+    hamburger.addEventListener('click', function () {
       stickyTop.style.overflow = 'visible';
     });
 
