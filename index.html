@@ -27,6 +27,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="style.css">
+
+
+<style>
+    .offcanvas.show ~ .navbar {
+      filter: blur(5px);
+      pointer-events: none;
+    }
+
+    .offcanvas.show ~ .main-content {
+      margin-top: 5rem;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -45,12 +58,14 @@
 
   </section>
 
+
   <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
     <div class="container">
       <!-- <a class="navbar-brand" href="#">Megatama</a> -->
       <div>
         <img href="#" src="img/Logo mtg.png" alt="Megatama Globalindo" class="img-responsive">
       </div>
+      
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -66,9 +81,9 @@
         </div>
         <div class="offcanvas-body">
           <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#info">Contact</a>
             <a class="nav-link" href="#home">About Us</a>
             <a class="nav-link" href="#rsvp">Visi-Misi</a>
-            <a class="nav-link" href="#info">Contact</a>
             <a class="nav-link" href="#story">Proces Production</a>
             <a class="nav-link" href="#gallery">Gallery</a>
             <!-- <a class="nav-link" href="#gifts">Gifts</a> -->
@@ -110,10 +125,10 @@
                 nur own composition of the best quality coconut shell charcoal. Now nur product is a leading market in
                 domestic and recent years we expand abread to fulfil the needs of our satisfied customers. We have
                 market in Europe, and Middle East.</p>
-
-              <button id="show-detail-btn2" class="btn btn-sm mt-1">Show Detail</button>
-              <button id="hide-detail-btn2" class="btn btn-sm mt-1" style="display:none;">Hide Detail</button>
-
+              <div class="tombol">
+                <button id="show-detail-btn2" class="btn btn-sm mt-1">Show Detail</button>
+                <button id="hide-detail-btn2" class="btn btn-sm mt-1" style="display:none;">Hide Detail</button>
+              </div>
             </div>
           </div>
         </div>
@@ -132,8 +147,10 @@
                 Creative approaches to the clients* special needs in order to find unique and tailored product solutions
                 and strong technological background.
               </p>
-              <button id="show-detail-btn" class="btn btn-sm mt-1">Show Detail</button>
-              <button id="hide-detail-btn" class="btn btn-sm mt-1" style="display:none;">Hide Detail</button>
+              <div class="tombol2">
+                <button id="show-detail-btn" class="btn btn-sm mt-1">Show Detail</button>
+                <button id="hide-detail-btn" class="btn btn-sm mt-1" style="display:none;">Hide Detail</button>
+              </div>
             </div>
 
           </div>
@@ -146,7 +163,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
-          <!-- <h2>Visi-Misi</h2> -->
+          <h2>Vision & Mision</h2>
         </div>
       </div>
       <div class="visimisi">
@@ -299,6 +316,7 @@
   </section>
 
 
+
   <section id="gallery" class="gallery">
     <div class="container">
       <div class="row justify-content-center">
@@ -391,12 +409,12 @@
           <h2>Contact</h2>
           <!-- <p class="alamat">Alamat: Lorem ipsum dolor . <br> Kec. lorem, Kota
             lorem</p>
-
+  
           <iframe
             src="https://www.bing.com/maps?osid=19903b36-0702-4973-b9da-2ef2dc4726f3&cp=-7.187196~110.438802&lvl=14.9&pi=0&imgid=2353b43e-4fc6-49c9-94ce-25730a0b46d1&v=2&sV=2&form=S00027"
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+  
           <a href="https://goo.gl/maps/R9seweCadg9MNyox5" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk
             membuka peta</a>
           <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak
@@ -518,12 +536,63 @@
 
 
     hamburger.addEventListener('click', function () {
-      stickyTop.style.overflow = 'visible';
+    
+        stickyTop.style.overflow = 'visible';
+      
+    
     });
+
 
     offcanvas.addEventListener('hidden.bs.offcanvas', function () {
       stickyTop.style.overflow = 'hidden';
+      
+      
     });
+
+    const offcanvasNavbar = document.querySelector('#offcanvasNavbar');
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasNavbar);
+
+    // Function to handle offcanvas navigation item clicks
+    function handleOffcanvasItemClick(event) {
+      const target = event.target;
+      if (target.tagName === 'A') {
+        const targetHref = target.getAttribute('href');
+        const targetSection = document.querySelector(targetHref);
+
+        // Scroll to the target section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Hide the offcanvas
+        bsOffcanvas.hide();
+
+        // Update the active menu item
+        const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+        menuItems.forEach(item => {
+          item.classList.remove('active');
+        });
+        const targetMenuItem = offcanvasNavbar.querySelector(`[href="${targetHref}"]`);
+        targetMenuItem.classList.add('active');
+      }
+    }
+
+    // Add event listener to offcanvas for item clicks
+    offcanvasNavbar.addEventListener('click', handleOffcanvasItemClick);
+
+    // Function to update the active menu item when the offcanvas is hidden
+    function updateActiveMenuItem() {
+      const activeItem = offcanvasNavbar.querySelector('.active');
+      if (activeItem) {
+        const activeHref = activeItem.getAttribute('href');
+        const targetSection = document.querySelector(activeHref);
+        if (targetSection) {
+          // Scroll to the active section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    // Add event listener to offcanvas for hidden events
+    offcanvasNavbar.addEventListener('hidden.bs.offcanvas', updateActiveMenuItem);
 
 
 
@@ -647,6 +716,8 @@
       // Sembunyikan tombol hide detail
       hideDetailBtn.style.display = "none";
     });
+
+
   </script>
 
   <script>

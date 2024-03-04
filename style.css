@@ -73,10 +73,12 @@ body {
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(4px);
+  /* z-index: 9999; */
 }
 
 .mynavbar .offcanvas {
   height: 100vh;
+  /* z-index: 99999; */
 
 }
 
@@ -146,6 +148,7 @@ body {
   margin-top: 20px;
 
 }
+
 .home .couple .row {
   margin-bottom: 0.5rem;
 
@@ -157,6 +160,12 @@ body {
   color: var(--blue);
 }
 
+
+.home .couple img {
+  width: 100%;
+  box-shadow: var(--shadow);
+
+}
 
 
 .home .couple button {
@@ -171,12 +180,6 @@ body {
   color: white;
 }
 
-
-.home .couple img {
-  width: 100%;
-  box-shadow: var(--shadow);
-
-}
 
 
 .info {
@@ -527,7 +530,10 @@ footer li {
 
   .sticky-top {
     overflow: hidden;
+    /* padding-right: 0; */
   }
+
+  
 
   .timeline li .timeline-image {
     width: 140px;
@@ -544,22 +550,30 @@ footer li {
   }
 
   .offcanvas {
-    max-width: 60%;
-    /* Mengatur lebar maksimum offcanvas */
+    max-width: 80%;
     max-height: 100vh;
-    overflow-y: auto;
-    /* Menambahkan scroll jika konten melebihi tinggi maksimum */
-  }
-
-  .home .couple h3{
-    margin-top: 2rem;
+    
   }
 
   .home .couple .row {
     flex-direction: column;
     padding-bottom: 2rem;
   }
- 
+
+  .home .couple .row .col-lg-6 h3 {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .home .couple .row .col-lg-6 p {
+    text-align: justify;
+  }
+
+  .home .couple .row .col-lg-6 .tombol,
+  .home .couple .row .col-lg-6 .tombol2 {
+    text-align: center;
+  }
+
 }
 
 /* mobile phone */
