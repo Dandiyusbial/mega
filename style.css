@@ -72,7 +72,7 @@ body {
 
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(20px);
   /* z-index: 9999; */
 }
 
@@ -81,6 +81,16 @@ body {
   /* z-index: 99999; */
 
 }
+
+.offcanvas.show~.navbar {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.offcanvas.show~.main-content {
+  margin-top: 5rem;
+}
+
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
@@ -125,7 +135,8 @@ body {
 
 
 
-.rsvp h2 {
+.rsvp h2,
+.product h2 {
   color: var(--white);
   font-family: 'Work Sans';
   font-size: 4rem;
@@ -243,6 +254,7 @@ body {
 
 .info .card-footer a {
   color: #fff;
+
 }
 
 
@@ -397,15 +409,14 @@ body {
   min-height: 100vh;
   margin-top: -6rem;
   padding-bottom: 5rem;
-
-
 }
 
 .rsvp .visimisi {
   padding-top: 8rem;
 }
 
-.rsvp h2 {
+.rsvp h2,
+.product h2 {
   font-size: 4.5rem;
 }
 
@@ -416,6 +427,86 @@ body {
 .rsvp p {
   color: white;
   font-size: 1.2rem;
+}
+
+.product {
+  /* background-image: url(img/Bg-visi.png ); */
+  background-color: var(--black);
+  background-size: cover;
+  min-height: 100vh;
+  /* margin-top: -6rem; */
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.product .row {
+  background-color: var(--black);
+}
+
+.product .row .col-md-4 {
+  width: max-content;
+}
+
+.product .card {
+margin: 1rem 1rem;
+  background-color: var(--black);
+  border: 1px solid var(--white);
+}
+
+.product .card img {
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+
+.product .row .card-body button {
+
+  color: var(--bg);
+  background-color: rgb(193, 207, 216);
+  box-shadow: var(--shadow);
+}
+
+.product .row .card-body button:hover {
+  background-color: #547be6;
+  color: white;
+}
+
+
+
+.modal-header,
+.modal-body,
+.modal-footer,
+.container-fluid .row {
+  /* background-color: #919191; */
+  background-color: rgb(126, 122, 122);
+  /* padding: 0 1rem; */
+}
+
+
+
+
+.modal-body .container-fluid .row .col-modal {
+
+  background-color: #ffffff;
+  border: 5px solid var(--bg);
+}
+
+.modal-body .container-fluid .row .col-modal .header {
+  /* margin-bottom: 1rem; */
+  border-bottom: 2px solid var(--bg);
+  font-size: 1rem bold;
+}
+.modal-body .container-fluid .row .col-modal .body {
+  /* border-bottom: 1px solid var(--pink); */
+  font-size: 1rem bold;
+}
+
+.modal-body .container-fluid .row .col-modal .body .table td{
+text-align: center;
+border: 1px none;
+}
+
+.modal-body .container-fluid .row .col-modal .body .table .td1{
+  text-align: left;
 }
 
 
@@ -533,7 +624,7 @@ footer li {
     /* padding-right: 0; */
   }
 
-  
+
 
   .timeline li .timeline-image {
     width: 140px;
@@ -547,12 +638,19 @@ footer li {
   .rsvp h2,
   .gifts h2 {
     padding-top: 2rem;
+
+  }
+
+  .rsvp h2 {
+
+    font-size: 3.8rem;
+    font-weight: bold;
   }
 
   .offcanvas {
     max-width: 80%;
     max-height: 100vh;
-    
+
   }
 
   .home .couple .row {
