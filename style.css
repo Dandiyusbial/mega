@@ -283,6 +283,12 @@ body {
   padding-bottom: 8rem;
 }
 
+.gallery .img img{
+  width: 100%;
+  height: 20rem; 
+  object-fit:cover;
+}
+
 .story span,
 .gifts span {
   text-transform: uppercase;
@@ -411,21 +417,21 @@ body {
   padding-bottom: 5rem;
 }
 
-.rsvp .visimisi {
-  padding-top: 8rem;
-}
-
 .rsvp h2,
 .product h2 {
   font-size: 4.5rem;
 }
 
-.rsvp h3 {
+.rsvp .visimisi {
+  padding-top: 5rem;
   color: #fff;
 }
 
+.rsvp .visimisi h3 {
+  font-size: 2.2rem;
+}
+
 .rsvp p {
-  color: white;
   font-size: 1.2rem;
 }
 
@@ -448,7 +454,7 @@ body {
 }
 
 .product .card {
-margin: 1rem 1rem;
+  margin: 1rem 1rem;
   background-color: var(--black);
   border: 1px solid var(--white);
 }
@@ -481,8 +487,14 @@ margin: 1rem 1rem;
   /* padding: 0 1rem; */
 }
 
+.modal-title{
+  color:#fff;
+  font-weight: bold
+}
 
-
+.modal-body .card-img-top{
+margin-top: 4rem;
+}
 
 .modal-body .container-fluid .row .col-modal {
 
@@ -495,17 +507,18 @@ margin: 1rem 1rem;
   border-bottom: 2px solid var(--bg);
   font-size: 1rem bold;
 }
+
 .modal-body .container-fluid .row .col-modal .body {
   /* border-bottom: 1px solid var(--pink); */
   font-size: 1rem bold;
 }
 
-.modal-body .container-fluid .row .col-modal .body .table td{
-text-align: center;
-border: 1px none;
+.modal-body .container-fluid .row .col-modal .body .table td {
+  text-align: center;
+  border: 1px none;
 }
 
-.modal-body .container-fluid .row .col-modal .body .table .td1{
+.modal-body .container-fluid .row .col-modal .body .table .td1 {
   text-align: left;
 }
 
@@ -575,8 +588,6 @@ footer li {
   html {
     font-size: 75%;
   }
-
-
 
   .timeline::before {
     left: 60px;
@@ -672,6 +683,10 @@ footer li {
     text-align: center;
   }
 
+  .modal-body .card-img-top{
+    margin-top: 0;
+    }
+
 }
 
 /* mobile phone */
@@ -697,4 +712,15 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
+
+
+  .rsvp .visimisi{
+    padding: 0 2rem;
+  }
+
+ .home .couple .row .col-lg-6 p {
+    text-align: justify;
+    margin: 0 2rem;
+  }
+
 }
