@@ -1,16 +1,21 @@
 :root {
-  --white: #f1f1f1;
+  --white: #dfdfdf;
+  --white2:#f5f5f5;
   --black: #3b3a3a;
   --blue: #547be6;
-  --pink: #f14e95;
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --gradient: linear-gradient(90deg, var(--blue), var(--white));
+}
+
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1.2rem;
   font-family: 'Work Sans', sans-serif;
-  min-height: 4000px;
 
 
   /* font-family: "Acme", sans-serif;
@@ -100,25 +105,33 @@ body {
 
 }
 
-.mynavbar .nav-link {
+.mynavbar .nav-link{
+
+  font-weight: 600;
   text-transform: uppercase;
 }
 
+.mynavbar .nav-link.active{
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.mynavbar a:hover {
+color: var(--bg);
+}
+
+
 .home {
-  /* background-image: url(img/bg.png); */
-  background-size: cover;
-  min-height: 100vh;
+  background-color: var(--white2);
   margin-top: -6rem;
   padding-top: 8rem;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
 
 }
 
 .home h2,
-/* .info h2, */
 .story h2,
 .gallery h2,
-/* .rsvp h2, */
 .gifts h2 {
   color: var(--black);
   font-family: 'Work Sans';
@@ -150,10 +163,6 @@ body {
 }
 
 
-/* .home p {
-  font-size: 1.1rem;
-  color: #666;
-} */
 
 .home .couple {
   margin-top: 20px;
@@ -283,10 +292,14 @@ body {
   padding-bottom: 8rem;
 }
 
-.gallery .img img{
+.gallery .img img {
   width: 100%;
-  height: 20rem; 
-  object-fit:cover;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.story{
+  background: var(--white);
 }
 
 .story span,
@@ -374,12 +387,14 @@ body {
   right: -15px;
 }
 
+
+
 .timeline li .timeline-panel::after {
   content: '';
   position: absolute;
   display: inline-block;
   border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
+  border-left: 14px solid #fff; 
   border-right: 0 solid #fff;
   border-bottom: 14px solid transparent;
   top: 81px;
@@ -405,16 +420,27 @@ body {
   right: auto;
 }
 
+
+
+
 .gallery {
   background-color: #f5f5f5;
 }
 
 .rsvp {
-  background-image: url(img/Bg-visi.png );
+  background-image: url(img/DESIGN\ VISI\ MISI.png);
   background-size: cover;
   min-height: 100vh;
-  margin-top: -6rem;
-  padding-bottom: 5rem;
+
+
+  /* background-color: rgb(36, 35, 35);
+  background-image:
+    linear-gradient(335deg, #696969 23px, transparent 23px),
+    linear-gradient(155deg, #696969 23px, transparent 23px),
+    linear-gradient(335deg, #696969 23px, transparent 23px),
+    linear-gradient(155deg, #696969 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px; */
 }
 
 .rsvp h2,
@@ -429,10 +455,12 @@ body {
 
 .rsvp .visimisi h3 {
   font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .rsvp p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .product {
@@ -487,13 +515,13 @@ body {
   /* padding: 0 1rem; */
 }
 
-.modal-title{
-  color:#fff;
+.modal-title {
+  color: #fff;
   font-weight: bold
 }
 
-.modal-body .card-img-top{
-margin-top: 4rem;
+.modal-body .card-img-top {
+  margin-top: 4rem;
 }
 
 .modal-body .container-fluid .row .col-modal {
@@ -609,6 +637,7 @@ footer li {
     border-right-width: 15px;
     left: -15px;
     right: auto;
+    top: 10px;
   }
 
   .timeline li .timeline-panel::after {
@@ -616,6 +645,7 @@ footer li {
     border-right-width: 14px;
     left: -13px;
     right: auto;
+     top: 10px;
   }
 }
 
@@ -683,9 +713,9 @@ footer li {
     text-align: center;
   }
 
-  .modal-body .card-img-top{
+  .modal-body .card-img-top {
     margin-top: 0;
-    }
+  }
 
 }
 
@@ -714,11 +744,11 @@ footer li {
   }
 
 
-  .rsvp .visimisi{
+  .rsvp .visimisi {
     padding: 0 2rem;
   }
 
- .home .couple .row .col-lg-6 p {
+  .home .couple .row .col-lg-6 p {
     text-align: justify;
     margin: 0 2rem;
   }
