@@ -289,7 +289,7 @@ color: var(--bg);
 .rsvp,
 .gifts {
   padding-top: 10rem;
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
 }
 
 .gallery .img img {
@@ -745,9 +745,8 @@ footer li {
 
 
   .rsvp .visimisi {
-    padding: 0 2rem;
+    padding: 10rem 0 2rem 2rem;
   }
-
   .home .couple .row .col-lg-6 p {
     text-align: justify;
     margin: 0 2rem;
